@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
   loading: false,
-  greeting: [],
+  payload: [],
   error: '',
 };
 
@@ -24,7 +24,7 @@ const greetingsSlice = createSlice({
       {
         ...state,
         loading: false,
-        greeting: action.payload,
+        payload: action.payload,
         error: '',
       }
     ));
@@ -32,7 +32,7 @@ const greetingsSlice = createSlice({
       {
         ...state,
         loading: false,
-        greeting: [],
+        payload: [],
         error: action.error.message,
       }
     ));
