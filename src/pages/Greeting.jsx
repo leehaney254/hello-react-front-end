@@ -5,7 +5,6 @@ const Greeting = () => {
 
 
   const { greetingReducer } = useSelector((state) => state);
-  console.log(greetingReducer);
   return (
     <>
       {greetingReducer.loading && <h1>loading....</h1>}
