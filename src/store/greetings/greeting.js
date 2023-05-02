@@ -9,7 +9,7 @@ const initialState = {
 const fetchGreeting = createAsyncThunk('greeting/fetchgreeting', () => fetch('http://127.0.0.1:3000/api/v1/greetings')
   .then((res) => res.json()));
 
-const greetingSlice = createSlice({
+const greetingsSlice = createSlice({
   name: 'greeting',
   initialState,
   reducers: {},
@@ -40,5 +40,5 @@ const greetingSlice = createSlice({
 })
 
 
-export default greetingSlice.reducer;
+export default greetingsSlice.reducer;
 export { fetchGreeting };
